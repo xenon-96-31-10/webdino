@@ -1,0 +1,263 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Exo');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-icons/font/bootstrap-icons';
+
+@import '~slick-carousel/slick/slick';
+
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+$bg-url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC";
+$bg-width: 50px;
+$bg-height: 50px;
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+
+body {
+
+  /* img size is 50x50 */
+  background: url($bg-url) repeat 0 0;
+
+  -webkit-animation: bg-scrolling-reverse .92s infinite; /* Safari 4+ */
+  -moz-animation:    bg-scrolling-reverse .92s infinite; /* Fx 5+ */
+  -o-animation:      bg-scrolling-reverse .92s infinite; /* Opera 12+ */
+  animation:         bg-scrolling-reverse .92s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function:    linear;
+  -o-animation-timing-function:      linear;
+  animation-timing-function:         linear;
+}
+
+// Typography
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  font-family: $title-font-family-sans-serif !important;
+}
+
+.tagline{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+//Фон
+
+.bg-indigo{
+  background-color: indigo;
+}
+
+.bg-mirror{
+  background-color: rgba(0, 0, 0, .4);
+  cursor: move;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+//Бегущая строка
+.marquee{
+    font-family: $title-font-family-sans-serif;
+    overflow: hidden;
+    font-size: 5rem;
+}
+
+//Форма
+// resize for textarea none
+.resize-none{
+  resize: none;
+}
+
+.floating-custom-label{
+font-size: 1.2rem;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+//LINKS
+.link-dotted{
+  color: $dark;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  &:hover{
+    color: $indigo;
+  }
+}
+
+//NAVS
+.custom-link{
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  color: $dark;
+}
+.custom-link:hover{
+  text-decoration: underline;
+  color: $indigo;
+}
+
+.custom-link-white{
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  color: $white;
+}
+.custom-link-white:hover{
+  text-decoration: underline;
+  color: $indigo;
+}
+
+.brandLogo{
+  font-family: $title-font-family-sans-serif;
+  cursor: pointer;
+  transition: letter-spacing 1s;
+  &:hover{
+    background: -webkit-linear-gradient($dark, #FFC926);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 5px;
+  }
+}
+
+#humburgerIcon:hover{
+  animation: ring .1s 4;
+}
+
+#contactIcon:hover{
+  animation: ring .1s 4;
+}
+
+//OFFCANVAS
+.nav-link {
+    font-size: 3rem;
+    font-family: $title-font-family-sans-serif;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color:$dark;
+    transition: color 0.35s ease-in-out, font-size 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    &:hover{
+      color: $indigo;
+      font-size: 3.5rem;
+    }
+}
+
+.submenu{
+  .nav-link {
+      font-size: 2rem;
+      font-family: $title-font-family-sans-serif;
+      font-weight: 300;
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: $gray-600;
+      transition: color 0.35s ease-in-out, font-size 0.15s ease-in-out, border-color 0.15s ease-in-out;
+      &:hover{
+        color: $gray-800;
+        font-size: 2.5rem;
+      }
+  }
+}
+
+.btn-close{
+  &:hover{
+      animation: ring .1s 4;
+  }
+}
+
+.btnBrief--offcanvas{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.btnBrief{
+  color: $dark;
+  width: 140px;
+  height: 140px;
+  border: solid 1px $dark;
+  border-radius: 50%;
+  background-image: radial-gradient($indigo, $indigo);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 0%;
+  transition: background-size .5s, color .5s, border .5s;
+  &:hover{
+    background-size: 100% 100%;
+    color: $white;
+    border: solid 1px $indigo;
+  }
+}
+
+//BTNS
+.btn-outline-primary:hover{
+  color: $white;
+}
+
+.btn-dark:hover{
+  background-color: $indigo;
+  border-color: $indigo;
+}
+
+@keyframes ring {
+    0%{ transform: rotateZ(-10deg); }
+    100%{ transform: rotateZ(10deg); }
+}
+
+@keyframes leterSpacingUp {
+  0% {letter-spacing: 5px;}
+  100% {letter-spacing: 15px;}
+}
+
+@include media-breakpoint-down(sm) {
+
+}
